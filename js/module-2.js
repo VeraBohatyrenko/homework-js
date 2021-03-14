@@ -397,3 +397,105 @@
 //   // Пиши код выше этой строки
 //   return total;
 // }
+
+
+
+/* Задача №-27 */
+// Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
+
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   const filteredNumbers = [];
+
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+
+/* Задача №-28 */
+// Дополни выражения остатка от деления так, чтобы код проходил тесты.
+
+// const a = 3 % 1;
+// const b = 4 % 3;
+// const c = 11 % 4;
+// const d = 12 % 7;
+// const e = 8 % 3;
+
+/* Задача №-29 */
+// Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end.Чётным считается число которое делится на 2 без остатка.
+
+// function getEvenNumbers(start, end) {
+//     // Пиши код ниже этой строки
+// let newArray = [];
+//   for (let i = start; i <= end; i += 1) {
+//   if (i % 2 === 0) {
+//     newArray.push(i);
+//   }
+//   }
+// return newArray;
+    
+//     // Пиши код выше этой строки
+//   }
+
+/* Задача №-30 */
+
+// Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+
+/* Задача №-31 */
+// Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
+
+// возвращала первое число от start до end, которое делится на divisor без остатка;
+// не использовала оператор break;
+// не использовала переменную number.
+
+// function findNumber(start, end, divisor) {
+//   // Пиши код ниже этой строки
+  
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+      
+//     }
+//   }
+
+//   return number;
+//   // Пиши код выше этой строки
+// }
+
+/* Задача №-32 */
+
+// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+
+// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+
+// function includes(array, value) {
+//   // Пиши код ниже этой строки
+// for (const number of array) {
+// if (value === number) {
+// return true;
+// }
+// }
+// return false;
+  
+//   // Пиши код выше этой строки
+// }
