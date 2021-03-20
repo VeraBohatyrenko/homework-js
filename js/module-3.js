@@ -525,23 +525,127 @@
 // /* Задача №-26 */
 
 // Пиши код ниже этой строки
-calculateMeanTemperatureForecast({
-today: {
- low: 10,
- high: 20,
-}, 
-tomorrow: { 
- low: 20, 
- high: 30  
-},
-})
-function calculateMeanTemperature(forecast) {
-  const { today: { low: todayLow, high: todayHigh } 
-  tomorrow: { low: tomorrowLow, high: tomorrowHigh } 
-  } = forecast;
- 
- console.log(forecast);
 
-  // Пиши код выше этой строки
-  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-}
+// Функция calculateMeanTemperature(forecast) принимает один параметр forecast - объект температур на два дня следующего формата.
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+// Замени объявления переменных todayLow, todayHigh, tomorrowLow и tomorrowHigh одной операцией деструктуризации свойств объекта forecast.
+
+
+// function calculateMeanTemperature(forecast) {
+//   const { today:
+//     { low: todayLow, high: todayHigh },
+//   tomorrow:
+//     { low: tomorrowLow, high: tomorrowHigh }
+//   } = forecast;
+
+//   // Пиши код выше этой строки
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// /* Задача №-27 */
+// В переменной scores хранится массив результатов тестирования.Используя распыление и методы Math.max() и Math.min() дополни код так, чтобы в переменной bestScore был самый высокий балл, а в worstScore самый низкий.
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Пиши код ниже этой строки
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+
+// /* Задача №-28 */
+
+// В переменных firstGroupScores, secondGroupScores и thirdGroupScores хранятся результаты тестирования отдельных групп. Используя распыление дополни код так, чтобы:
+
+// В переменной allScores хранился массив всех результатов от первой до третьей группы.
+// В переменной bestScore был самый высокий общий балл.
+// В переменной worstScore был самый низкий общий балл.
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Пиши код ниже этой строки
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// /* Задача №-29 */
+
+// В конструкторе можно создавать новые тесты, для которых есть настройки по умолчанию которые хранятся в переменной defaultSettings. Во время создания теста, все или часть настроек можно переопределить, они хранятся в переменной overrideSettings.
+
+// Для того чтобы получить финальные настройки теста, необходимо взять настройки по умолчанию и поверх них применить переопределённые настройки.Дополни код так, чтобы в переменной finalSettings получился объект финальных настроек теста.
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Пиши код ниже этой строки
+// const finalSettings = {...defaultSettings, ...overrideSettings};
+
+// /* Задача №-30 */
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
+
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data. В новом объекте должно быть свойство completed, значение которого хранится в одноимённой локальной переменной.
+
+// В параметре data гарантированно будет только свойство text, а остальные два, category и priority, могут отсутствовать.Тогда, в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
+
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'Общее';
+//   const priority = 'Обычный';
+//   // Пиши код ниже этой строки
+// const second = { category, priority,  completed, ...data };
+//   return second;
+//   // Пиши код выше этой строки
+// }
+
+
+// /* Задача №-31 */
+
+// Используя операцию rest дополни код функции add() так, чтобы она принимала любое количество аргументов, считала и возвращала их сумму.
+
+// // Пиши код ниже этой строки
+// function add(...args) {
+//   let totalArgs = 0;
+//  for (const arg of args) {
+//  totalArgs += arg;
+//  }
+//   return totalArgs;
+//   // Пиши код выше этой строки
+// }
+
+// /* Задача №-32 */
+// Функция addOverNum() считает сумму всех аргументов.Измени параметры и тело функции addOverNum() так, чтобы она считала сумму только тех аргументов, которые больше чем заданное число.Это число должно быть первым параметром функции.
+
+
+// // Пиши код ниже этой строки
+// function addOverNum(value, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//    if(arg > value) {
+//    total += arg;
+//    }  
+//   }
+
+//   return total;
+//   // Пиши код выше этой строки
+// }
+
+// /* Задача №-33 */
+
+
