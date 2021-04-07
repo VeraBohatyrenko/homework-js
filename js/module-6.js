@@ -214,13 +214,111 @@
 
 // /* Задача №-13 */
 
-// Пиши код ниже этой строки
-// const getUserNames = users.map((user) => {
-//   return user.name;  
+// Дополни функцию getUserNames(users) так, чтобы она возвращала массив имён пользователей (свойство name) из массива объектов в параметре users.
 
-//   }); 
+// // Пиши код ниже этой строки
+// const users = [];
 
- const users = [];
-const getUserNames = users.map(user => user.getUserName);
-  // Пиши код выше этой строки
-  console.log(['Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony']);
+// const getUserNames = (users => users.map(user => user.name));  
+
+ 
+//   // Пиши код выше этой строки
+
+// /* Задача №-14 */
+
+// Дополни функцию getUserEmails(users) так, чтобы она возвращала массив почтовых адресов пользователей(свойство email) из массива объектов в параметре users.
+
+// // Пиши код ниже этой строки
+// const getUserEmails = (users => users.map(user => user.email)); 
+//   // Пиши код выше этой строки
+
+
+// /* Задача №-15 */
+
+// Дополни код так, чтобы в переменной evenNumbers получился массив чётных чисел из массива numbers, а в переменной oddNumbers массив нечётных.Обязательно используй метод filter().
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Пиши код ниже этой строки
+
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+
+// /* Задача №-16 */
+
+
+// Дополни код так, чтобы в переменной allGenres был массив всех жанров книг(свойство genres) из массива books, а в переменной uniqueGenres массив уникальных жанров - без повторений.
+
+// const books = [
+//     {
+//       title: 'Последнее королевство',
+//       author: 'Бернард Корнуэлл',
+//       genres: ['приключения', 'историческое']
+//     },
+//     {
+//       title: 'На берегу спокойных вод',
+//       author: 'Роберт Шекли',
+//       genres: ['фантастика', 'мистика']
+//     },
+//     {
+//       title: 'Красна как кровь',
+//       author: 'Ли Танит',
+//       genres: ['ужасы', 'мистика', 'приключения']
+//     }
+//   ];
+//   // Пиши код ниже этой строки
+//   const allGenres = books.flatMap(book => book.genres);
+//   const uniqueGenres = allGenres.filter((genre, index, array) => array.indexOf(genre) === index);
+
+
+// /* Задача №-17 */
+
+// Используя метод filter() дополни код так, чтобы:
+
+// В переменной topRatedBooks получился массив книг рейтинг которых (свойство rating) больше либо равно значению переменной MIN_RATING.
+// В переменной booksByAuthor получился массив книг написанных автором с именем(свойство author) которое совпадает со значением в переменной AUTHOR.
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = 'Бернард Корнуэлл';
+// // Пиши код ниже этой строки
+
+// const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+
+
+// /* Задача №-18 */
+
+// Дополни функцию getUsersWithEyeColor(users, color) так, чтобы она возвращала массив пользователей у которых цвет глаз(свойство eyeColor) совпадает со значением параметра color.
+
+// // Пиши код ниже этой строки
+// const getUsersWithEyeColor = (users, color) => users.filter((user) => user.eyeColor === color);
+// // Пиши код выше этой строки
+
+
+
+// /* Задача №-19 */
+
+// Дополни функцию getUsersWithAge(users, minAge, maxAge) так, чтобы она возвращала массив пользователей, возраст которых (свойство age) попадает в промежуток от minAge до maxAge.
+
+// // Пиши код ниже этой строки
+// const getUsersWithAge = (users, minAge, maxAge) => users.filter((user) => user.age > minAge && user.age < maxAge);
+// // Пиши код выше этой строки
+
+
+
+// /* Задача №-20 */
+
+// Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName.Массив друзей пользователя хранится в свойстве friends.
+
+// // Пиши код ниже этой строки
+// const getUsersWithFriend = (users, friendName) => users.filter((user) => user.friends.includes(friendName));
+// // Пиши код выше этой строки
+
+
