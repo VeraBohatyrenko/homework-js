@@ -321,4 +321,249 @@
 // const getUsersWithFriend = (users, friendName) => users.filter((user) => user.friends.includes(friendName));
 // // Пиши код выше этой строки
 
+// /* Задача №-21 */
+
+// Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
+
+// Пиши код ниже этой строки
+
+// const users = [
+
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39
+//   }
+// ]
+
+// const getFriends = (users) => users
+//   .flatMap((user) => user.friends)
+//   .filter((friends, index, array) => array.indexOf(friends) === index);
+// // Пиши код выше этой строки
+
+// console.log(getFriends(users));
+
+// /* Задача №-22 */
+// Дополни функцию getActiveUsers(users) так, чтобы она возвращала массив активных пользователей, значение свойства isActive которых true.
+
+// // Пиши код ниже этой строки
+// const getActiveUsers = (users) => 
+// users.filter((user) => user.isActive === true);
+// // Пиши код выше этой строки
+// console.log(getActiveUsers(users));
+
+// /* Задача №-23 */
+
+// Дополни функцию getInactiveUsers(users) так, чтобы она возвращала массив неактивных пользователей, значение свойства isActive которых false.
+
+// // Пиши код ниже этой строки
+// const getInactiveUsers = (users) => users.filter((user) => user.isActive === false);
+// // Пиши код выше этой строки
+// console.log(getInactiveUsers(users));
+
+// /* Задача №-24 */
+
+// Используя метод find() дополни код так, чтобы:
+
+// В переменной bookWithTitle получился объект книги название которой (свойство title) совпадает со значением переменной BOOK_TITLE.
+// В переменной bookByAuthor получился объект книги автор который(свойство author) совпадает со значением переменной AUTHOR.
+
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'Сон смешного человека';
+// const AUTHOR = 'Роберт Шекли';
+// // Пиши код ниже этой строки
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+
+// /* Задача №-25 */
+
+// Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого (свойство email) совпадает со значением параметра email.
+
+// Пиши код ниже этой строки
+// const getUserWithEmail = (users, email) => users.find((user) => user.email === email)
+// Пиши код выше этой строки
+
+// /* Задача №-26 */
+
+
+// Используя метод every() дополни код так, чтобы:
+
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+
+// const eachElementInFirstIsEven = firstArray.every(( firstArray) => firstArray % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(( firstArray) => firstArray % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(( secondArray) => secondArray % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(( secondArray) => secondArray % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(( thirdArray) => thirdArray % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(( thirdArray) => thirdArray % 2 !== 0);
+
+
+// /* Задача №-27 */
+
+
+// Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны(свойство isActive) и возвращала true или false.
+
+// // Пиши код ниже этой строки
+// const isEveryUserActive = (users) => users.every((user) => user.isActive === true);
+// // Пиши код выше этой строки
+
+// /* Задача №-28 */
+
+// Используя метод some() дополни код так, чтобы:
+
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+
+// const anyElementInFirstIsEven = firstArray.some(( firstArray) => firstArray % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(( firstArray) => firstArray % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(( secondArray) => secondArray % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(( secondArray) => secondArray % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(( thirdArray) => thirdArray % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(( thirdArray) => thirdArray % 2 !== 0);
+
+
+// /* Задача №-29 */
+
+
+// Дополни функцию isAnyUserActive(users) так, чтобы она проверяла наличие активных пользователей(свойство isActive) и возвращала true или false.
+
+// // Пиши код ниже этой строки
+// const isAnyUserActive = users => users.some((user) => user.isActive === true);
+// // Пиши код выше этой строки
+
+
+// /* Задача №-30 */
+
+
+// Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх.Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Пиши код ниже этой строки
+
+// const totalPlayTime = playtimes.reduce((playtimes, players) => playtimes + players, 0);
+
+// // Пиши код выше этой строки
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// /* Задача №-31 */
+const players = [
+  { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+  { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+  { name: 'Киви', playtime: 241, c: 1 },
+];
+// Пиши код ниже этой строки
+
+const totalAveragePlaytimePerGame = players.map((player) => {
+  return player.playtime / player.gamesPlayed;
+})
+  .reduce((acc, value) => {
+    return acc + value
+  }, 0);
+
+console.log(totalAveragePlaytimePerGame);
+
+
 
